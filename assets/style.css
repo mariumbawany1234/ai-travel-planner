@@ -1,0 +1,626 @@
+/* =====================================
+   AI TRAVEL PLANNER
+   Modern Portfolio UI
+===================================== */
+
+
+/* ---------- GLOBAL ---------- */
+
+
+.stApp {
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #eef2ff 45%,
+        #ffffff 100%
+    );
+
+    font-family:
+    "Inter",
+    "Segoe UI",
+    sans-serif;
+
+}
+
+
+
+/* Remove Streamlit branding */
+
+#MainMenu {
+
+    visibility:hidden;
+
+}
+
+
+footer {
+
+    visibility:hidden;
+
+}
+
+
+header {
+
+    visibility:hidden;
+
+}
+
+
+
+/* ---------- SIDEBAR ---------- */
+
+
+section[data-testid="stSidebar"] {
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #111827,
+        #1e293b
+    );
+
+}
+
+
+section[data-testid="stSidebar"] * {
+
+    color:white;
+
+}
+
+
+
+.sidebar-title {
+
+
+    font-size:28px;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.side-info {
+
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:
+
+    rgba(255,255,255,0.08);
+
+    line-height:2;
+
+    font-size:15px;
+
+}
+
+
+
+/* ---------- HERO ---------- */
+
+
+.hero {
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #eef2ff
+    );
+
+
+    padding:45px 35px;
+
+
+    border-radius:28px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(15,23,42,0.08);
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+.hero-icon {
+
+
+    font-size:60px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:48px;
+
+
+    font-weight:900;
+
+
+    letter-spacing:-1px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    -webkit-text-fill-color:transparent;
+
+
+}
+
+
+
+.hero p {
+
+
+    font-size:19px;
+
+
+    color:#64748b;
+
+
+    max-width:700px;
+
+
+    margin:auto;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+/* ---------- FEATURE CARDS ---------- */
+
+
+.feature-card {
+
+
+    background:white;
+
+
+    padding:25px 15px;
+
+
+    border-radius:22px;
+
+
+    text-align:center;
+
+
+    height:120px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    box-shadow:
+
+
+    0 10px 25px rgba(15,23,42,0.07);
+
+
+    border:1px solid #e5e7eb;
+
+
+    transition:all .3s ease;
+
+
+}
+
+
+
+.feature-card:hover {
+
+
+    transform:translateY(-6px);
+
+
+    box-shadow:
+
+
+    0 20px 35px rgba(15,23,42,0.12);
+
+
+}
+
+
+
+.feature-icon {
+
+
+    font-size:35px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.feature-title {
+
+
+    font-weight:700;
+
+
+    color:#1e293b;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+/* ---------- SECTION TITLES ---------- */
+
+
+.section-title {
+
+
+    margin-top:35px;
+
+
+    margin-bottom:20px;
+
+
+    font-size:28px;
+
+
+    font-weight:800;
+
+
+    color:#111827;
+
+
+}
+
+
+
+/* ---------- INPUTS ---------- */
+
+
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox select {
+
+
+    border-radius:14px !important;
+
+
+    border:1px solid #dbeafe !important;
+
+
+    padding:12px !important;
+
+
+}
+
+
+
+.stTextInput input:focus,
+.stNumberInput input:focus {
+
+
+    border:2px solid #6366f1 !important;
+
+
+}
+
+
+
+/* ---------- RADIO BUTTON ---------- */
+
+
+div[data-testid="stRadio"] label {
+
+
+    background:white;
+
+
+    padding:10px 18px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #e5e7eb;
+
+
+}
+
+
+
+/* ---------- BUTTON ---------- */
+
+
+.stButton button {
+
+
+    width:100%;
+
+
+    height:52px;
+
+
+    border-radius:16px;
+
+
+    border:none;
+
+
+    font-size:17px;
+
+
+    font-weight:700;
+
+
+    color:white;
+
+
+    background:
+
+
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.stButton button:hover {
+
+
+    transform:translateY(-2px);
+
+
+    box-shadow:
+
+
+    0 15px 30px rgba(99,102,241,.35);
+
+
+}
+
+
+
+/* ---------- FORM CONTAINER ---------- */
+
+
+div[data-testid="stForm"] {
+
+
+    background:white;
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    border:1px solid #e5e7eb;
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(15,23,42,.06);
+
+
+}
+
+
+
+/* ---------- OUTPUT CARD ---------- */
+
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+
+
+    background:white;
+
+
+    border-radius:25px !important;
+
+
+    border:1px solid #e5e7eb;
+
+
+    padding:25px;
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(15,23,42,.08);
+
+
+}
+
+
+
+/* ---------- MARKDOWN OUTPUT ---------- */
+
+
+.stMarkdown {
+
+
+    line-height:1.8;
+
+
+    color:#334155;
+
+
+}
+
+
+
+/* ---------- DOWNLOAD BUTTON ---------- */
+
+
+.stDownloadButton button {
+
+
+    width:100%;
+
+
+    border-radius:14px;
+
+
+    height:48px;
+
+
+    font-weight:700;
+
+
+    background:#0f172a;
+
+
+    color:white;
+
+
+}
+
+
+
+.stDownloadButton button:hover {
+
+
+    background:#1e293b;
+
+
+}
+
+
+
+/* ---------- METRIC ---------- */
+
+
+div[data-testid="stMetric"] {
+
+
+    background:white;
+
+
+    padding:15px;
+
+
+    border-radius:18px;
+
+
+    border:1px solid #e5e7eb;
+
+
+}
+
+
+
+/* ---------- EXPANDER ---------- */
+
+
+.streamlit-expanderHeader {
+
+
+    font-weight:700;
+
+
+}
+
+
+
+/* ---------- SUCCESS MESSAGE ---------- */
+
+
+div[data-testid="stAlert"] {
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+/* ---------- FOOTER ---------- */
+
+
+.footer {
+
+
+    text-align:center;
+
+
+    margin-top:50px;
+
+
+    padding:20px;
+
+
+    color:#64748b;
+
+
+    font-size:14px;
+
+
+}
